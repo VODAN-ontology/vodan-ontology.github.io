@@ -12,11 +12,13 @@
                                                    <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-1164-1351> ,
                                                                                              <https://github.com/mnieuwland> ,
                                                                                              <https://orcid.org/0000-0002-1215-167X> ;
-                                                   <http://purl.org/dc/elements/1.1/description> "Esse é modelo semântico de dados para a versão RAPID, de 23 de março de 2020, do formulário de relato de caso (FRC) para o COVID-19 da Organização Mundial de Saúde (OMS). Seu objetivo é prover referências semânticas às perguntas e respostas do formulário."@pt-br ;
+                                                   <http://purl.org/dc/elements/1.1/description> "Esse é modelo semântico de dados para a versão RAPID, de 23 de março de 2020, do formulário de relato de caso (FRC) para o COVID-19 da Organização Mundial de Saúde (OMS). Seu objetivo é prover referências semânticas às perguntas e respostas do formulário."@pt-br ,
+                                                                                                 "This is a semantic data model for the WHO's COVID-19 case record form RAPID version from 23 March 2020. It aims at providing semantic references to the questions and answers of the form."@en ;
                                                    <http://purl.org/dc/elements/1.1/format> "OWL"@en ;
                                                    <http://purl.org/dc/elements/1.1/title> "WHO COVID-19 Rapid Version CRF Ontology"@en ;
-                                                   <http://purl.org/dc/terms/hasVersion> "0.4"@en ;
+                                                   <http://purl.org/dc/terms/hasVersion> "0.5"@en ;
                                                    <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/legalcode> ;
+                                                   <http://semanticscience.org/resource/SIO_000563> <https://www.who.int/docs/default-source/coronaviruse/who-ncov-crf.pdf?sfvrsn=84766e69_2> ;
                                                    rdfs:comment "This is a semantic data model for the WHO's COVID-19 case record form RAPID version from 23 March 2020. It aims at providing semantic references to the questions and answers of the form."@en ;
                                                    rdfs:label "WHO COVID-19 Rapid Version CRF Ontology"@en ;
                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "WHO COVID-19 Rapid Version CRF Ontology"@en ;
@@ -40,6 +42,10 @@
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://semanticscience.org/resource/SIO_000563
+<http://semanticscience.org/resource/SIO_000563> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -139,13 +145,19 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.bioontology.org/ontology/LNC/LP130460-1
 <http://purl.bioontology.org/ontology/LNC/LP130460-1> rdf:type owl:Class ;
-                                                      rdfs:subClassOf :Signs_and_symptoms ;
+                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                                       rdfs:label "Site of the bleeding"@en .
+
+
+###  http://purl.bioontology.org/ontology/LNC/MTHU029790
+<http://purl.bioontology.org/ontology/LNC/MTHU029790> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                      rdfs:label "Admission date"@en .
 
 
 ###  http://purl.bioontology.org/ontology/SNOMEDCT/248567008
 <http://purl.bioontology.org/ontology/SNOMEDCT/248567008> rdf:type owl:Class ;
-                                                          rdfs:subClassOf :Signs_and_symptoms ;
+                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                                           rdfs:label "Indrawing of ribs during respiration"@en .
 
 
@@ -161,13 +173,13 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.obolibrary.org/obo/HP_0000509
 <http://purl.obolibrary.org/obo/HP_0000509> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Conjunctivitis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0000707
 <http://purl.obolibrary.org/obo/HP_0000707> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Abnormality of the nervous system"@en ,
                                                        "Anormalidade de sistema nervoso"@pt-br ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Abnormality of the nervous system"@en .
@@ -175,75 +187,135 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.obolibrary.org/obo/HP_0000819
 <http://purl.obolibrary.org/obo/HP_0000819> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "diabetes"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0000822
 <http://purl.obolibrary.org/obo/HP_0000822> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Hypertension"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0000988
 <http://purl.obolibrary.org/obo/HP_0000988> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Skin rash"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0001250
 <http://purl.obolibrary.org/obo/HP_0001250> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Seizures"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001287
+<http://purl.obolibrary.org/obo/HP_0001287> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Meningitis"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001410
+<http://purl.obolibrary.org/obo/HP_0001410> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Decreased liver function"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0001626
 <http://purl.obolibrary.org/obo/HP_0001626> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Abnormality of the cardiovascular system"@en ,
                                                        "Anormalidade do sistema cardiovascular"@pt-br ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Abnormality of the cardiovascular system"@en .
 
 
+###  http://purl.obolibrary.org/obo/HP_0001638
+<http://purl.obolibrary.org/obo/HP_0001638> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Cardiomyopathy"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001695
+<http://purl.obolibrary.org/obo/HP_0001695> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Cardiac arrest"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001701
+<http://purl.obolibrary.org/obo/HP_0001701> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Pericarditis"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001733
+<http://purl.obolibrary.org/obo/HP_0001733> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Pancreatitis"@en .
+
+
 ###  http://purl.obolibrary.org/obo/HP_0001746
 <http://purl.obolibrary.org/obo/HP_0001746> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Asplenia"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001903
+<http://purl.obolibrary.org/obo/HP_0001903> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Anemia"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001919
+<http://purl.obolibrary.org/obo/HP_0001919> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Acute kidney injury"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0001944
+<http://purl.obolibrary.org/obo/HP_0001944> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Dehydration"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0001945
 <http://purl.obolibrary.org/obo/HP_0001945> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Fever"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002014
 <http://purl.obolibrary.org/obo/HP_0002014> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Diarrhea"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002017
 <http://purl.obolibrary.org/obo/HP_0002017> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Nausea and vomiting"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002027
 <http://purl.obolibrary.org/obo/HP_0002027> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Abdominal pain"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0002090
+<http://purl.obolibrary.org/obo/HP_0002090> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Pneumonia"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002094
 <http://purl.obolibrary.org/obo/HP_0002094> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Dyspnea"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002099
 <http://purl.obolibrary.org/obo/HP_0002099> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Asma"@pt-br ,
                                                        "Asthma"@en ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Ashtma"@en .
@@ -251,103 +323,151 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.obolibrary.org/obo/HP_0002105
 <http://purl.obolibrary.org/obo/HP_0002105> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Hemoptysis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002315
 <http://purl.obolibrary.org/obo/HP_0002315> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Headache"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0002383
+<http://purl.obolibrary.org/obo/HP_0002383> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Encephalitis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002540
 <http://purl.obolibrary.org/obo/HP_0002540> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Inability to walk"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002716
 <http://purl.obolibrary.org/obo/HP_0002716> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Lymphadenopathy"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0002789
+<http://purl.obolibrary.org/obo/HP_0002789> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Tachypnea"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0002829
 <http://purl.obolibrary.org/obo/HP_0002829> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Arthralgia"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0003326
 <http://purl.obolibrary.org/obo/HP_0003326> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Myalgia"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0004372
 <http://purl.obolibrary.org/obo/HP_0004372> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Reduced consciousness/confusion"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0004395
 <http://purl.obolibrary.org/obo/HP_0004395> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Malnutrition"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0006528
 <http://purl.obolibrary.org/obo/HP_0006528> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Chronic lung disease"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0011675
+<http://purl.obolibrary.org/obo/HP_0011675> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Arrhythmia"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0011950
+<http://purl.obolibrary.org/obo/HP_0011950> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Bronchiolitis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0012378
 <http://purl.obolibrary.org/obo/HP_0012378> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Fatigue"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0012622
 <http://purl.obolibrary.org/obo/HP_0012622> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Chronic kidney disease"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0012735
 <http://purl.obolibrary.org/obo/HP_0012735> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Cough"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0012819
+<http://purl.obolibrary.org/obo/HP_0012819> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Myocarditis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0030828
 <http://purl.obolibrary.org/obo/HP_0030828> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Wheezing"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0031245
 <http://purl.obolibrary.org/obo/HP_0031245> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Productive cough"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0031273
+<http://purl.obolibrary.org/obo/HP_0031273> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Shock"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0031417
 <http://purl.obolibrary.org/obo/HP_0031417> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Rhinorrhea"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0031864
+<http://purl.obolibrary.org/obo/HP_0031864> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Bacteremia"@en .
+
+
+###  http://purl.obolibrary.org/obo/HP_0100584
+<http://purl.obolibrary.org/obo/HP_0100584> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Endocarditis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0100749
 <http://purl.obolibrary.org/obo/HP_0100749> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Chest pain"@en .
 
 
 ###  http://purl.obolibrary.org/obo/HP_0200042
 <http://purl.obolibrary.org/obo/HP_0200042> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Signs_and_symptoms ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Skin ulcer"@en .
 
 
@@ -376,127 +496,159 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.obolibrary.org/obo/NCIT_C105783
 <http://purl.obolibrary.org/obo/NCIT_C105783> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Signs_and_symptoms ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Have other symptoms"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C113609
 <http://purl.obolibrary.org/obo/NCIT_C113609> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Co-morbidities ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Chronic liver disease"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C119242
 <http://purl.obolibrary.org/obo/NCIT_C119242> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Symptom Onset Date"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C124475
 <http://purl.obolibrary.org/obo/NCIT_C124475> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Mid-Upper Arm Circumference"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C14219
 <http://purl.obolibrary.org/obo/NCIT_C14219> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Co-morbidities ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "HIV"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C159866
 <http://purl.obolibrary.org/obo/NCIT_C159866> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Co-morbidities ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Other Risk Factor"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C161656
 <http://purl.obolibrary.org/obo/NCIT_C161656> rdf:type owl:Class ;
-                                              rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                               rdfs:label "Alert Verbal Painful Unresponsive Scale Clinical Classification"@en .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C247
+<http://purl.obolibrary.org/obo/NCIT_C247> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                           rdfs:label "ACE Inhibitor"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C25206
 <http://purl.obolibrary.org/obo/NCIT_C25206> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Temperature"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C25298
 <http://purl.obolibrary.org/obo/NCIT_C25298> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Systolic Blood Pressure"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C25299
 <http://purl.obolibrary.org/obo/NCIT_C25299> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Diastolic Blood Pressure"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C25347
 <http://purl.obolibrary.org/obo/NCIT_C25347> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Height"@en .
 
 
-###  http://purl.obolibrary.org/obo/NCIT_C26740
-<http://purl.obolibrary.org/obo/NCIT_C26740> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
-                                             rdfs:label "Dehydration"@en .
+###  http://purl.obolibrary.org/obo/NCIT_C257
+<http://purl.obolibrary.org/obo/NCIT_C257> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                           rdfs:label "Nonsteroidal Antiinflammatory Drug"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C26791
 <http://purl.obolibrary.org/obo/NCIT_C26791> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Signs_and_symptoms ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Hemorrhage"@en .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C281
+<http://purl.obolibrary.org/obo/NCIT_C281> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                           rdfs:label "Antiviral"@en ,
+                                                      "Antiviral"@pt-br ;
+                                           <http://www.w3.org/2004/02/skos/core#prefLabel> "Antiviral"@en .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C2959
+<http://purl.obolibrary.org/obo/NCIT_C2959> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Complication"@en .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C3353
+<http://purl.obolibrary.org/obo/NCIT_C3353> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                            rdfs:label "Acute Respiratory Distress Syndrome"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C3423
 <http://purl.obolibrary.org/obo/NCIT_C3423> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Tuberculosis"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C49677
 <http://purl.obolibrary.org/obo/NCIT_C49677> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Heart Rate"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C49678
 <http://purl.obolibrary.org/obo/NCIT_C49678> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Respiratory Rate"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C50747
 <http://purl.obolibrary.org/obo/NCIT_C50747> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Signs_and_symptoms ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Sore Throat"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C60832
 <http://purl.obolibrary.org/obo/NCIT_C60832> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Oxygen Saturation Measurement"@en .
+
+
+###  http://purl.obolibrary.org/obo/NCIT_C66930
+<http://purl.obolibrary.org/obo/NCIT_C66930> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             rdfs:label "Angiotensin II Receptor Antagonist"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C67147
 <http://purl.obolibrary.org/obo/NCIT_C67147> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Co-morbidities ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Curent Smoker"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C81328
 <http://purl.obolibrary.org/obo/NCIT_C81328> rdf:type owl:Class ;
-                                             rdfs:subClassOf :Date_of_onset_and_admisison_vital_signs ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                              rdfs:label "Body Weight"@en .
 
 
 ###  http://purl.obolibrary.org/obo/NCIT_C9305
 <http://purl.obolibrary.org/obo/NCIT_C9305> rdf:type owl:Class ;
-                                            rdfs:subClassOf :Co-morbidities ;
+                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                             rdfs:label "Malignant Neoplasm"@en .
 
 
@@ -521,39 +673,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                        "unidade de tempo"@pt-br .
 
 
-###  http://purl.org/vodan/whocovid19crfsemdatamodel#Co-morbidities
-:Co-morbidities rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
-                                ] ;
-                rdfs:label "Co-morbidities"@en ,
-                           "Comorbidades"@pt-br ;
-                <http://www.w3.org/2004/02/skos/core#definition> "Set of co-morbidities related to the co-morbidities section's questions and answers of the WHO COVID-19 CRF"@en ;
-                <http://www.w3.org/2004/02/skos/core#prefLabel> "Co-morbidities"@en .
-
-
-###  http://purl.org/vodan/whocovid19crfsemdatamodel#Date_of_onset_and_admisison_vital_signs
-:Date_of_onset_and_admisison_vital_signs rdf:type owl:Class ;
-                                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                                           owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
-                                                         ] ;
-                                         rdfs:label "Date of onset and admisison vital signs"@en .
-
-
-###  http://purl.org/vodan/whocovid19crfsemdatamodel#Signs_and_symptoms
-:Signs_and_symptoms rdf:type owl:Class ;
-                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
-                                    ] ;
-                    rdfs:label "Signs and Symptoms"@en .
-
-
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors
 <http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors> rdf:type owl:Class ;
                                                                  rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question> ,
@@ -564,6 +683,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                    owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C247>
                                                                                  ] ;
                                                                  rdfs:label "Angiotensin converting enzyme inhibitors (ACE inhibitors)"@en ,
                                                                             "Inibidores da enzima de conversão da angiotensina (inibidores da ECA)"@pt-br ;
@@ -604,6 +727,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                        [ rdf:type owl:Restriction ;
                                                                          owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                          owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission>
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                         owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C66930>
                                                                        ] ;
                                                        rdfs:label "Angiotensin II receptor blockers (ARBs)"@en ,
                                                                   "Bloqueadores dos receptores de angiotensina II (BRAs)"@pt-br ;
@@ -694,6 +821,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                                       [ rdf:type owl:Restriction ;
                                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                                         owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                                      ] ,
+                                                                                                      [ rdf:type owl:Restriction ;
+                                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C3353>
                                                                                                       ] ;
                                                                                       rdfs:label "Acute Respiratory Distress Syndrome"@en ,
                                                                                                  "Síndrome Respiratória Aguda"@pt-br ;
@@ -706,6 +837,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001919>
                                                                                      ] ;
                                                                      rdfs:label "Acute renal injury"@en ,
                                                                                 "Lesão renal aguda"@pt-br ;
@@ -761,6 +896,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                             owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001903>
                                                                           ] ;
                                                           rdfs:label "Anaemia"@en ,
                                                                      "Anemia"@pt-br ;
@@ -810,6 +949,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                               owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Medication>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                              owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Antiviral>
                                                                             ] ;
                                                             rdfs:label "Antiviral"@en ,
                                                                        "Antiviral"@pt-br ;
@@ -953,6 +1096,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                 owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                              ] ,
+                                                                              [ rdf:type owl:Restriction ;
+                                                                                owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0031864>
                                                                               ] ;
                                                               rdfs:label "Bacteraemia"@en ,
                                                                          "Bacteremia"@pt-br ;
@@ -977,6 +1124,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                              owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                           ] ,
+                                                                           [ rdf:type owl:Restriction ;
+                                                                             owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                             owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C26791>
                                                                            ] ;
                                                            rdfs:label "Bleeding"@en ,
                                                                       "Sangramento (hemorragia)"@pt-br ;
@@ -999,6 +1150,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                   owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0011950>
                                                                                 ] ;
                                                                 rdfs:label "Bronchiolitis"@en ,
                                                                            "Bronquiolite"@pt-br ;
@@ -1039,6 +1194,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                    owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001695>
                                                                                  ] ;
                                                                  rdfs:label "Cardiac arrest"@en ,
                                                                             "Parada cardíaca"@pt-br ;
@@ -1051,6 +1210,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0011675>
                                                                                      ] ;
                                                                      rdfs:label "Arritmia cardíaca"@pt-br ,
                                                                                 "Cardiac arrhythmia"@en ;
@@ -1079,6 +1242,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                  [ rdf:type owl:Restriction ;
                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                    owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                 ] ,
+                                                                                 [ rdf:type owl:Restriction ;
+                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001638>
                                                                                  ] ;
                                                                  rdfs:label "Cardiomiopatia"@pt-br ,
                                                                             "Cardiomyopathy"@en ;
@@ -1137,6 +1304,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                   owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Module_3>
+                                                                                ] ,
+                                                                                [ rdf:type owl:Restriction ;
+                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001695>
                                                                                 ] ;
                                                                 rdfs:label "Complications"@en ,
                                                                            "Complicações"@pt-br ;
@@ -1149,6 +1320,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                               owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                              owl:someValuesFrom <https://hpo.jax.org/app/browse/term/HP:0001289>
                                                                             ] ;
                                                             rdfs:label "Confusion"@en ,
                                                                        "Confusão"@pt-br ;
@@ -1177,7 +1352,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Coronavirus
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Coronavirus> rdf:type owl:Class ;
-                                                              rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                              rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                               [ rdf:type owl:Restriction ;
                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                 owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -1424,6 +1599,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                  owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0100584>
                                                                                ] ;
                                                                rdfs:label "Endocardite"@pt-br ,
                                                                           "Endocarditis"@en ;
@@ -1456,7 +1635,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Falciparum_malaria
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Falciparum_malaria> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                                     rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -1585,7 +1764,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/HIV_test
 <http://purl.org/vodan/whocovid19crfsemdatamodel/HIV_test> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                           rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                              owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -1818,6 +1997,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                     owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Inclusion>
+                                                                                  ] ,
+                                                                                  [ rdf:type owl:Restriction ;
+                                                                                    owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                    owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0012735>
                                                                                   ] ;
                                                                   rdfs:label "Cough"@en ,
                                                                              "Tosse"@pt-br ;
@@ -1830,6 +2013,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Inclusion>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0002094>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0002789>
                                                                                      ] ;
                                                                      rdfs:comment "Tachypnoea: respiratory rate ≥50 breaths/min for <1 year; ≥40 for 1-4 years; ≥30 for 5-12 years; ≥20 for ≥13 years"@en ;
                                                                      rdfs:label "Dispneia (falta de ar) ou Taquipneia"@pt-br ,
@@ -1843,6 +2034,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                            owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Inclusion>
+                                                                                         ] ,
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                           owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001945>
                                                                                          ] ;
                                                                          rdfs:label "A history of self-reported feverishness or measured fever of ≥ 38 degrees Celsius"@en ,
                                                                                     "Um histórico de febre autorelatado ou febre medida de ≥ 38oC"@pt-br ;
@@ -1875,7 +2070,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Influenza_virus
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Influenza_virus> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                                  rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                     owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -2054,6 +2249,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                       owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                      owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001410>
                                                                                     ] ;
                                                                     rdfs:label "Disfunção hepática"@pt-br ,
                                                                                "Liver dysfunction"@en ;
@@ -2164,6 +2363,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                           [ rdf:type owl:Restriction ;
                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                             owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001287>
+                                                                                          ] ,
+                                                                                          [ rdf:type owl:Restriction ;
+                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0002383>
                                                                                           ] ;
                                                                           rdfs:label "Meningite/encefalite"@pt-br ,
                                                                                      "Meningitis/Encephalitis"@en ;
@@ -2232,6 +2439,14 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                              owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                             owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001701>
+                                                                                           ] ,
+                                                                                           [ rdf:type owl:Restriction ;
+                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                             owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0012819>
                                                                                            ] ;
                                                                            rdfs:label "Miocardite/Pericardite"@pt-br ,
                                                                                       "Myocarditis/Pericarditis"@en ;
@@ -2248,6 +2463,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                           owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                          owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C257>
                                                                         ] ;
                                                         rdfs:label "Antiinflamatório não esteroide (AINE)"@pt-br ,
                                                                    "Non-steroidal anti-inflammatory (NSAID)"@en ;
@@ -2272,7 +2491,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Non-Falciparum_malaria
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Non-Falciparum_malaria> rdf:type owl:Class ;
-                                                                         rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                                         rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                                          [ rdf:type owl:Restriction ;
                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                            owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -2351,6 +2570,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                                     ] ,
+                                                                                     [ rdf:type owl:Restriction ;
+                                                                                       owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C2959>
                                                                                      ] ;
                                                                      rdfs:label "Other complication"@en ,
                                                                                 "Outra complicação"@pt-br ;
@@ -2359,7 +2582,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Other_respiratory_pathogen
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Other_respiratory_pathogen> rdf:type owl:Class ;
-                                                                             rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                                             rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                                              [ rdf:type owl:Restriction ;
                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                                owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -2469,6 +2692,17 @@ xsd:date rdf:type rdfs:Datatype .
                                                                  <http://www.w3.org/2004/02/skos/core#prefLabel> "Oxygen therapy"@en .
 
 
+###  http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question
+<http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C41116> ,
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://purl.org/vodan/whocovid19crfsemdatamodel/has_value> ;
+                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list>
+                                                                                      ] ;
+                                                                      rdfs:comment "A question where the possible answers are: Positive, Negative or Not Done."@en ;
+                                                                      <http://www.w3.org/2004/02/skos/core#definition> "A question where the possible answers are: Positive, Negative or Not Done."@en .
+
+
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/PT
 <http://purl.org/vodan/whocovid19crfsemdatamodel/PT> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/Laboratory_question> ,
@@ -2487,6 +2721,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                [ rdf:type owl:Restriction ;
                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                  owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                               ] ,
+                                                                               [ rdf:type owl:Restriction ;
+                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001733>
                                                                                ] ;
                                                                rdfs:label "Pancreatite"@pt-br ,
                                                                           "Pancreatitis"@en ;
@@ -2537,6 +2775,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                               owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                              owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0002090>
                                                                             ] ;
                                                             rdfs:label "Pneumonia"@en ,
                                                                        "Pneumonia"@pt-br ;
@@ -2702,7 +2944,7 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                      ] ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
-                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/NCIT_C26740>
+                                                                                       owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0001944>
                                                                                      ] ;
                                                                      rdfs:label "Desidratação severa"@pt-br ,
                                                                                 "Severe dehydration"@en ;
@@ -2732,6 +2974,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                           owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Complications>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                          owl:someValuesFrom <http://purl.obolibrary.org/obo/HP_0031273>
                                                                         ] ;
                                                         rdfs:label "Choque"@pt-br ,
                                                                    "Shock"@en ;
@@ -3002,7 +3248,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Viral_haemorrhagic_fever
 <http://purl.org/vodan/whocovid19crfsemdatamodel/Viral_haemorrhagic_fever> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> ,
+                                                                           rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/PNNot_done_Question> ,
                                                                                            [ rdf:type owl:Restriction ;
                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                                              owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Pathogen_testing>
@@ -3257,17 +3503,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Which virus"@en .
 
 
-###  http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question
-<http://purl.org/vodan/whocovid19crfsemdatamodel/YNNot_done_Question> rdf:type owl:Class ;
-                                                                      rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C41116> ,
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty <http://purl.org/vodan/whocovid19crfsemdatamodel/has_value> ;
-                                                                                        owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list>
-                                                                                      ] ;
-                                                                      rdfs:comment "A question where the possible answers are: Yes, No or Not Done."@en ;
-                                                                      <http://www.w3.org/2004/02/skos/core#definition> "A question where the possible answers are: Yes, No or Not Done."@en .
-
-
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/YNUN_Question
 <http://purl.org/vodan/whocovid19crfsemdatamodel/YNUN_Question> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C41116> ,
@@ -3320,6 +3555,10 @@ xsd:date rdf:type rdfs:Datatype .
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
                                                                               owl:someValuesFrom <http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs>
+                                                                            ] ,
+                                                                            [ rdf:type owl:Restriction ;
+                                                                              owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                              owl:someValuesFrom <http://purl.bioontology.org/ontology/LNC/MTHU029790>
                                                                             ] ;
                                                             rdfs:label "Admission date at this facility"@en ,
                                                                        "Data de admissão nesta unidade"@pt-br ;
@@ -3459,6 +3698,11 @@ xsd:date rdf:type rdfs:Datatype .
                                                                    <http://www.w3.org/2004/02/skos/core#prefLabel> "Diagnostic/pathogen testing"@en .
 
 
+###  http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list
+<http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/list_of_values> .
+
+
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission
 <http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/Question_group> ,
@@ -3524,11 +3768,6 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                     "WHO-COVID-19-Rapid-CRF"@en ;
                                                                          <http://www.w3.org/2004/02/skos/core#definition> "This class represents the Rapid version of the World Health Organisation's (WHO) Case Record Form (CRF) for the COVID-19 outbreak."@en ;
                                                                          <http://www.w3.org/2004/02/skos/core#prefLabel> "WHO-COVID-19-Rapid-CRF"@en .
-
-
-###  http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list
-<http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list> rdf:type owl:Class ;
-                                                                 rdfs:subClassOf <http://purl.org/vodan/whocovid19crfsemdatamodel/list_of_values> .
 
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/ynu_list
@@ -3613,6 +3852,12 @@ xsd:date rdf:type rdfs:Datatype .
                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Country list"@en .
 
 
+###  https://hpo.jax.org/app/browse/term/HP:0001289
+<https://hpo.jax.org/app/browse/term/HP:0001289> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                 rdfs:label "Confusion"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -3679,7 +3924,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                <http://purl.org/vodan/whocovid19crfsemdatamodel/antiviral_list> ;
                                                                       rdfs:label "Lopinavir/Ritonavir"@en ,
                                                                                  "Lopinavir/Ritonavir"@pt-br ;
-                                                                      <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://purl.obolibrary.org/obo/NCIT_C807"^^xsd:anyURI .
+                                                                      <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/MESH/C558899> ,
+                                                                                                                         <http://purl.bioontology.org/ontology/SNOMEDCT/134573001> ,
+                                                                                                                         "http://purl.obolibrary.org/obo/NCIT_C2096"^^xsd:anyURI .
 
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Mask
@@ -3726,7 +3973,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                                      <http://purl.org/vodan/whocovid19crfsemdatamodel/antiviral_list> ;
                                                             rdfs:label "Ribavirin"@en ,
                                                                        "Ribavirina"@pt-br ;
-                                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://purl.obolibrary.org/obo/NCIT_C807"^^xsd:anyURI .
+                                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/MESH/D012254> ,
+                                                                                                               <http://purl.bioontology.org/ontology/SNOMEDCT/387188005> ,
+                                                                                                               "http://purl.obolibrary.org/obo/NCIT_C807"^^xsd:anyURI .
 
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/Transfered
@@ -3925,7 +4174,6 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C49487
 <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C49487> rdf:type owl:NamedIndividual ,
                                                                             <http://purl.org/vodan/whocovid19crfsemdatamodel/hiv_list> ,
-                                                                            <http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list> ,
                                                                             <http://purl.org/vodan/whocovid19crfsemdatamodel/ynu_list> ,
                                                                             <http://purl.org/vodan/whocovid19crfsemdatamodel/ynun_list> ;
                                                                    rdfs:comment "A resposta negativa à uma pergunta."@pt-br ,
@@ -3937,7 +4185,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C49488
 <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C49488> rdf:type owl:NamedIndividual ,
-                                                                            <http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list> ,
                                                                             <http://purl.org/vodan/whocovid19crfsemdatamodel/ynu_list> ,
                                                                             <http://purl.org/vodan/whocovid19crfsemdatamodel/ynun_list> ;
                                                                    rdfs:comment "A resposta afirmativa à uma pergunta."@pt-br ,
@@ -4003,12 +4250,22 @@ xsd:date rdf:type rdfs:Datatype .
                                                                                 "MERS-CoV"@pt-br .
 
 
+###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Negative
+<http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Negative> rdf:type owl:NamedIndividual ,
+                                                                              <http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list> .
+
+
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Not_done
 <http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Not_done> rdf:type owl:NamedIndividual ,
-                                                                              <http://purl.org/vodan/whocovid19crfsemdatamodel/ynnotdone_list> ;
+                                                                              <http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list> ;
                                                                      rdfs:label "Not done"@en ,
                                                                                 "Não realizado"@pt-br ;
                                                                      <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://purl.obolibrary.org/obo/NCIT_C49484"^^xsd:anyURI .
+
+
+###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Positive
+<http://purl.org/vodan/whocovid19crfsemdatamodel/instances/Positive> rdf:type owl:NamedIndividual ,
+                                                                              <http://purl.org/vodan/whocovid19crfsemdatamodel/pnnotdone_list> .
 
 
 ###  http://purl.org/vodan/whocovid19crfsemdatamodel/instances/SARS-CoV-2
@@ -4185,6 +4442,9 @@ xsd:date rdf:type rdfs:Datatype .
                                                                         "Brazil"@en ,
                                                                         "Brazilië"@nl ;
                                                              <http://xmlns.com/foaf/0.1/name> "Brasil"@pt-br .
+
+
+<http://semanticscience.org/resource/SIO_000563> rdfs:label "describes"@en .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
