@@ -10,7 +10,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:resource="http://semanticscience.org/resource/">
+     xmlns:resource="http://semanticscience.org/resource/"
+     xmlns:whocovid19crfsemdatamodel="http://purl.org/vodan/whocovid19crfsemdatamodel/">
     <owl:Ontology rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel">
         <owl:imports rdf:resource="http://eulersharp.sourceforge.net/2003/03swap/countries"/>
         <dc:contributor rdf:resource="https://github.com/brunasv"/>
@@ -20,13 +21,13 @@
         <dc:description xml:lang="pt-br">Esse é modelo semântico de dados para a versão RAPID, de 23 de março de 2020, do formulário de relato de caso (FRC) para o COVID-19 da Organização Mundial de Saúde (OMS). Seu objetivo é prover referências semânticas às perguntas e respostas do formulário.</dc:description>
         <dc:description xml:lang="en">This is a semantic data model for the WHO&apos;s COVID-19 case record form RAPID version from 23 March 2020. It aims at providing semantic references to the questions and answers of the form.</dc:description>
         <dc:format xml:lang="en">OWL</dc:format>
-        <dc:title xml:lang="en">WHO COVID-19 Rapid Version CRF Ontology</dc:title>
-        <terms:hasVersion xml:lang="en">0.5</terms:hasVersion>
+        <dc:title xml:lang="en">WHO COVID-19 Rapid Version CRF Semantic Data Model</dc:title>
+        <terms:hasVersion xml:lang="en">1.0.0</terms:hasVersion>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/legalcode"/>
         <resource:SIO_000563 rdf:resource="https://www.who.int/docs/default-source/coronaviruse/who-ncov-crf.pdf?sfvrsn=84766e69_2"/>
         <rdfs:comment xml:lang="en">This is a semantic data model for the WHO&apos;s COVID-19 case record form RAPID version from 23 March 2020. It aims at providing semantic references to the questions and answers of the form.</rdfs:comment>
-        <rdfs:label xml:lang="en">WHO COVID-19 Rapid Version CRF Ontology</rdfs:label>
-        <skos:prefLabel xml:lang="en">WHO COVID-19 Rapid Version CRF Ontology</skos:prefLabel>
+        <rdfs:label xml:lang="en">WHO COVID-19 Rapid Version CRF Semantic Data Model</rdfs:label>
+        <skos:prefLabel xml:lang="en">WHO COVID-19 Rapid Version CRF Semantic Data Model</skos:prefLabel>
         <foaf:name xml:lang="en">WHO COVID-19 Rapid Version CRF Ontology</foaf:name>
     </owl:Ontology>
     
@@ -58,6 +59,13 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/title -->
 
 
@@ -72,6 +80,17 @@
     
 
 
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/who_covid_crf_label -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/who_covid_crf_label">
+        <rdfs:comment xml:lang="en">The value of this property will be excact question label from WHO CRF form</rdfs:comment>
+        <rdfs:label xml:lang="en">WHO COVID CRF label</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://semanticscience.org/resource/SIO_000563 -->
 
 
@@ -83,6 +102,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#closeMatch -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#closeMatch"/>
     
 
 
@@ -104,6 +130,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#relatedMatch"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/page -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/page"/>
     
 
 
@@ -273,12 +306,43 @@
     
 
 
-    <!-- http://purl.bioontology.org/ontology/LNC/MTHU029790 -->
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/128238001 -->
 
 
-    <owl:Class rdf:about="http://purl.bioontology.org/ontology/LNC/MTHU029790">
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/128238001">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:label xml:lang="en">Admission date</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Doença cardíaca crônica</rdfs:label>
+        <rdfs:label xml:lang="en">chronic heart disease</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/DOID_114</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0001626</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3079</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/128283000 -->
+
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/128283000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Chronic nervous system disorder</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Desordem crônica do sistema nervoso</rdfs:label>
+        <skos:prefLabel xml:lang="en">Chronic nervous system disorder</skos:prefLabel>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0000707</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C26835</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/223366009 -->
+
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/223366009">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Healthcare Professional</rdfs:label>
+        <rdfs:label xml:lang="en">Healthcare Worker</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/LNC/LA20794-6</skos:exactMatch>
+        <skos:relatedMatch xml:lang="en">http://purl.obolibrary.org/obo/OBI_0000207</skos:relatedMatch>
     </owl:Class>
     
 
@@ -289,6 +353,40 @@
     <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/248567008">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Indrawing of ribs during respiration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/444323003 -->
+
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/444323003">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Modified glasgow coma score</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/450316000 -->
+
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/450316000">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Severe dehydration</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0001944</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C26740</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.bioontology.org/ontology/SNOMEDCT/77386006 -->
+
+
+    <owl:Class rdf:about="http://purl.bioontology.org/ontology/SNOMEDCT/77386006">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Pregnant</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/LNC/LA15173-0</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C124295</skos:exactMatch>
     </owl:Class>
     
 
@@ -317,18 +415,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000509">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Conjunctivitis</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0000707 -->
-
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000707">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:label xml:lang="en">Abnormality of the nervous system</rdfs:label>
-        <rdfs:label xml:lang="pt-br">Anormalidade de sistema nervoso</rdfs:label>
-        <skos:prefLabel xml:lang="en">Abnormality of the nervous system</skos:prefLabel>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/9826008</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C34504</skos:exactMatch>
     </owl:Class>
     
 
@@ -339,6 +427,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000819">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">diabetes</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/73211009</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C2985</skos:exactMatch>
     </owl:Class>
     
 
@@ -349,6 +439,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000822">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Hypertension</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/38341003</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3117</skos:exactMatch>
     </owl:Class>
     
 
@@ -359,6 +451,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0000988">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Skin rash</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/271807003</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C39594</skos:exactMatch>
     </owl:Class>
     
 
@@ -369,6 +463,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001250">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Seizures</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/91175000</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C2962</skos:exactMatch>
     </owl:Class>
     
 
@@ -389,18 +485,6 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001410">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Decreased liver function</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/HP_0001626 -->
-
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001626">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:label xml:lang="en">Abnormality of the cardiovascular system</rdfs:label>
-        <rdfs:label xml:lang="pt-br">Anormalidade do sistema cardiovascular</rdfs:label>
-        <skos:prefLabel xml:lang="en">Abnormality of the cardiovascular system</skos:prefLabel>
     </owl:Class>
     
 
@@ -475,22 +559,14 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/HP_0001944 -->
-
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001944">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
-        <rdfs:label xml:lang="en">Dehydration</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/HP_0001945 -->
 
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0001945">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Fever</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/386661006</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3038</skos:exactMatch>
     </owl:Class>
     
 
@@ -501,6 +577,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002014">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Diarrhea</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/62315008</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C2987</skos:exactMatch>
     </owl:Class>
     
 
@@ -511,6 +589,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002017">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Nausea and vomiting</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/16932000</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3259</skos:exactMatch>
     </owl:Class>
     
 
@@ -521,6 +601,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002027">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Abdominal pain</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/21522001</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C26682</skos:exactMatch>
     </owl:Class>
     
 
@@ -541,6 +623,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002094">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Dyspnea</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/267036007</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C2998</skos:exactMatch>
     </owl:Class>
     
 
@@ -552,6 +636,8 @@
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="pt-br">Asma</rdfs:label>
         <rdfs:label xml:lang="en">Asthma</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/195967001</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C28397</skos:exactMatch>
         <skos:prefLabel xml:lang="en">Ashtma</skos:prefLabel>
     </owl:Class>
     
@@ -563,6 +649,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002105">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Hemoptysis</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/66857006</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3094</skos:exactMatch>
     </owl:Class>
     
 
@@ -573,6 +661,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002315">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Headache</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/25064002</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C34661</skos:exactMatch>
     </owl:Class>
     
 
@@ -593,6 +683,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002540">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Inability to walk</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/282145008</skos:closeMatch>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C120230</skos:closeMatch>
     </owl:Class>
     
 
@@ -603,6 +695,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002716">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Lymphadenopathy</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/3074600</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C50764</skos:exactMatch>
     </owl:Class>
     
 
@@ -613,6 +707,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002789">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Tachypnea</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/271823003</skos:exactMatch>
     </owl:Class>
     
 
@@ -623,6 +718,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0002829">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Arthralgia</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/57676002</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C50464</skos:exactMatch>
     </owl:Class>
     
 
@@ -633,6 +730,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0003326">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Myalgia</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/68962001</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C27009</skos:exactMatch>
     </owl:Class>
     
 
@@ -653,6 +752,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0004395">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Malnutrition</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/2492009</skos:closeMatch>
     </owl:Class>
     
 
@@ -663,6 +763,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0006528">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Chronic lung disease</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/13839001</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C98541</skos:exactMatch>
     </owl:Class>
     
 
@@ -693,6 +795,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012378">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Fatigue</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/84229001</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C3036</skos:exactMatch>
     </owl:Class>
     
 
@@ -703,6 +807,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012622">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Chronic kidney disease</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/709044004</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C80078</skos:exactMatch>
     </owl:Class>
     
 
@@ -713,6 +819,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0012735">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Cough</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/49727002</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C37935</skos:exactMatch>
     </owl:Class>
     
 
@@ -733,6 +841,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0030828">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Wheezing</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/56018004</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C78718</skos:exactMatch>
     </owl:Class>
     
 
@@ -743,6 +853,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031245">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Productive cough</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/28743005</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C78569</skos:exactMatch>
     </owl:Class>
     
 
@@ -763,6 +875,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0031417">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Rhinorrhea</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/64531003</skos:closeMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C54282</skos:exactMatch>
     </owl:Class>
     
 
@@ -793,6 +907,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0100749">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Chest pain</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/29857009</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C38665</skos:exactMatch>
     </owl:Class>
     
 
@@ -803,6 +919,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/HP_0200042">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Skin ulcer</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/46742003</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C54247</skos:exactMatch>
     </owl:Class>
     
 
@@ -862,6 +980,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C113609">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Chronic liver disease</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/328383001</skos:exactMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/DOID_409</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0001392</skos:relatedMatch>
     </owl:Class>
     
 
@@ -872,6 +993,18 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C119242">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Symptom Onset Date</rdfs:label>
+        <skos:relatedMatch xml:lang="en">http://purl.bioontology.org/ontology/SNOMEDCT/298059007</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C124436 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C124436">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Sex at Birth</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/LNC/76689-9</skos:relatedMatch>
     </owl:Class>
     
 
@@ -882,6 +1015,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C124475">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Mid-Upper Arm Circumference</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/284473002</skos:exactMatch>
     </owl:Class>
     
 
@@ -892,6 +1026,9 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C14219">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">HIV</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/62479008</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/DOID_635</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C2851</skos:relatedMatch>
     </owl:Class>
     
 
@@ -902,6 +1039,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C159866">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Other Risk Factor</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/74964007</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C160153</skos:relatedMatch>
     </owl:Class>
     
 
@@ -912,6 +1051,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C161656">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Alert Verbal Painful Unresponsive Scale Clinical Classification</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/449159002</skos:exactMatch>
     </owl:Class>
     
 
@@ -922,6 +1062,22 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C247">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">ACE Inhibitor</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/LNC/LP31444-0</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/MESH/D000806</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NDFRT/N0000029130</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/372733002</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C25150 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25150">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Age</rdfs:label>
+        <skos:exactMatch xml:lang="en">http://purl.bioontology.org/ontology/LNC/MTHU010047</skos:exactMatch>
+        <skos:exactMatch xml:lang="en">http://purl.bioontology.org/ontology/SNOMEDCT/397669002</skos:exactMatch>
     </owl:Class>
     
 
@@ -932,6 +1088,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25206">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/386725007</skos:closeMatch>
     </owl:Class>
     
 
@@ -942,6 +1099,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25298">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Systolic Blood Pressure</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/271649006</skos:exactMatch>
     </owl:Class>
     
 
@@ -952,6 +1110,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25299">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Diastolic Blood Pressure</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/271650006</skos:exactMatch>
     </owl:Class>
     
 
@@ -962,6 +1121,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C25347">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Height</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/271603002</skos:relatedMatch>
     </owl:Class>
     
 
@@ -972,6 +1132,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C257">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Nonsteroidal Antiinflammatory Drug</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NDFRT/N0000175722</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/16403005</skos:exactMatch>
     </owl:Class>
     
 
@@ -982,6 +1144,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C26791">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Hemorrhage</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/50960005</skos:exactMatch>
     </owl:Class>
     
 
@@ -1024,6 +1187,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C3423">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Tuberculosis</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/56717001</skos:exactMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0032262</skos:relatedMatch>
     </owl:Class>
     
 
@@ -1034,6 +1199,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C49677">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Heart Rate</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/364075005</skos:exactMatch>
     </owl:Class>
     
 
@@ -1044,6 +1210,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C49678">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Respiratory Rate</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/86290005</skos:exactMatch>
     </owl:Class>
     
 
@@ -1054,6 +1221,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C50747">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Sore Throat</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0025439</skos:closeMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/267102003</skos:exactMatch>
     </owl:Class>
     
 
@@ -1064,6 +1233,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C60832">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Oxygen Saturation Measurement</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/104847001</skos:exactMatch>
     </owl:Class>
     
 
@@ -1074,6 +1244,10 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C66930">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Angiotensin II Receptor Antagonist</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/MESH/D057911</skos:closeMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NDFRT/N0000000070</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/NDFRT/N0000175561</skos:exactMatch>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/372913009</skos:exactMatch>
     </owl:Class>
     
 
@@ -1084,6 +1258,30 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C67147">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Curent Smoker</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/365981007</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C154329</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C68615 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C68615">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Date of Birth</rdfs:label>
+        <skos:exactMatch xml:lang="en">http://purl.bioontology.org/ontology/SNOMEDCT/184099003</skos:exactMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C81253 -->
+
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C81253">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Gestational weeks assessment</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/366323009</skos:relatedMatch>
     </owl:Class>
     
 
@@ -1094,6 +1292,7 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C81328">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Body Weight</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/27113001</skos:exactMatch>
     </owl:Class>
     
 
@@ -1104,6 +1303,8 @@
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C9305">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Malignant Neoplasm</rdfs:label>
+        <skos:exactMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/363346000</skos:exactMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/HP_0002664</skos:relatedMatch>
     </owl:Class>
     
 
@@ -1141,23 +1342,48 @@
     
 
 
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel#Admission_date_at_this_facility -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel#Admission_date_at_this_facility">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Admission date at this facility</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/LNC/MTHU029790</skos:closeMatch>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/399423000</skos:closeMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel#Laboratory_Worker -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel#Laboratory_Worker">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Laboratory Worker</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/159282002</skos:closeMatch>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C51830</skos:closeMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/IDO_0100589</skos:relatedMatch>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/MS_1001270</skos:relatedMatch>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel#Sternal_capillary_refill_time_greater_than_2_seconds -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel#Sternal_capillary_refill_time_greater_than_2_seconds">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+        <rdfs:label xml:lang="en">Sternal capillary refill time &gt;2seconds&apos;</rdfs:label>
+        <skos:relatedMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/15527001</skos:relatedMatch>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors -->
 
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -1167,6 +1393,36 @@
         <rdfs:label xml:lang="en">Angiotensin converting enzyme inhibitors (ACE inhibitors)</rdfs:label>
         <rdfs:label xml:lang="pt-br">Inibidores da enzima de conversão da angiotensina (inibidores da ECA)</rdfs:label>
         <skos:prefLabel xml:lang="en">Angiotensin converting enzyme inhibitors (ACE inhibitors)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors_medication -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors_medication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors_pre_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors_pre_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/ACE_inhibitors"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1182,9 +1438,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/9e59585b61d0d4b504587049a6646305"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">ALT/SGPT</rdfs:label>
         <rdfs:label xml:lang="pt-br">ALT/TGP</rdfs:label>
-        <skos:prefLabel xml:lang="en">ALT/SGPT</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about ALT/SGPT measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about ALT/SGPT measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -1200,9 +1456,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/d68e7eab170ef95b4be22b73f6e48abe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">APTT/APTR</rdfs:label>
+        <rdfs:label xml:lang="en">Question about APTT/APTR measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">TTPA/APTR</rdfs:label>
-        <skos:prefLabel xml:lang="en">APTT/APTR</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about APTT/APTR measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -1214,18 +1470,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C66930"/>
             </owl:Restriction>
@@ -1233,6 +1477,36 @@
         <rdfs:label xml:lang="en">Angiotensin II receptor blockers (ARBs)</rdfs:label>
         <rdfs:label xml:lang="pt-br">Bloqueadores dos receptores de angiotensina II (BRAs)</rdfs:label>
         <skos:prefLabel xml:lang="en">Angiotensin II receptor blockers (ARBs)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs_medication -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs_medication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs_pre_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs_pre_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/ARBs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1248,9 +1522,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/9e59585b61d0d4b504587049a6646305"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">AST/SGOT</rdfs:label>
         <rdfs:label xml:lang="pt-br">AST/TGO</rdfs:label>
-        <skos:prefLabel xml:lang="en">AST/SGOT</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about AST/SGOT measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about AST/SGOT measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -1275,12 +1549,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/List_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C161656"/>
             </owl:Restriction>
@@ -1299,6 +1567,36 @@
         <rdfs:label xml:lang="pt-br">Escala A V D I</rdfs:label>
         <skos:definition xml:lang="en">The AVPU scale (an acronym from &quot;alert, verbal, pain, unresponsive&quot;) is a system by which a health care professional can measure and record a patient&apos;s level of consciousness.</skos:definition>
         <skos:prefLabel xml:lang="en">AVPU scale</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_scale"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1405,20 +1703,6 @@
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Age">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                        <owl:hasValue rdf:resource="http://www.w3.org/2006/time#unitMonth"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
-                        <owl:hasValue rdf:resource="http://www.w3.org/2006/time#unitYear"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Demographics"/>
@@ -1437,17 +1721,41 @@
     
 
 
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Age_months -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Age_months">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Age"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:hasValue rdf:resource="http://www.w3.org/2006/time#unitMonth"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Age_years -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Age_years">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Age"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:hasValue rdf:resource="http://www.w3.org/2006/time#unitYear"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness -->
 
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -1457,6 +1765,36 @@
         <rdfs:label xml:lang="en">Altered consciousness/confusion</rdfs:label>
         <rdfs:label xml:lang="pt-br">Consciência alterada/confusão</rdfs:label>
         <skos:prefLabel xml:lang="en">Altered consciousness/confusion</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Altered_consciousness"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1642,9 +1980,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001746"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Asplenia</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Asplenia</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Asplenia</rdfs:label>
-        <skos:prefLabel xml:lang="en">Asplenia</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Asplenia</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Asplenia</skos:prefLabel>
     </owl:Class>
     
 
@@ -1666,9 +2005,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002099"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Ashtma</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Ashtma</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Asma</rdfs:label>
-        <skos:prefLabel xml:lang="en">Ashtma</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Ashtma</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Ashtma</skos:prefLabel>
     </owl:Class>
     
 
@@ -1678,18 +2018,6 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -1716,23 +2044,41 @@
     
 
 
-    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic -->
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic_admission -->
 
 
-    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_diastolic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -1755,6 +2101,36 @@
         <rdfs:label xml:lang="en">BP (systolic)</rdfs:label>
         <rdfs:label xml:lang="pt-br">Pressão arterial (sistólica)</rdfs:label>
         <skos:prefLabel xml:lang="en">BP (systolic)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/BP_systolic"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1876,9 +2252,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/59850d750431038e6055b4e4ee4c3b90"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">CRP</rdfs:label>
         <rdfs:label xml:lang="pt-br">PCR</rdfs:label>
-        <skos:prefLabel xml:lang="en">CRP</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about CRP measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about CRP measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -1888,21 +2264,39 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Sternal capillary refill time &gt;2seconds</rdfs:label>
+        <rdfs:label xml:lang="pt-br">Tempo de enchimento capilar &gt;2 segundos</rdfs:label>
+        <skos:prefLabel xml:lang="en">Sternal capillary refill time &gt;2seconds</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Sternal capillary refill time &gt;2seconds</rdfs:label>
-        <rdfs:label xml:lang="pt-br">Tempo de enchimento capilar &gt;2 segundos</rdfs:label>
-        <skos:prefLabel xml:lang="en">Sternal capillary refill time &gt;2seconds</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Capillary_refill"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1969,12 +2363,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001626"/>
+                <owl:someValuesFrom rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/128238001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Chronic cardiac disease (not hypertension)</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Chronic cardiac disease (not hypertension)</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Doença cardíaca crônica (não hipertensão)</rdfs:label>
-        <skos:prefLabel xml:lang="en">Chronic cardiac disease (not hypertension)</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Chronic cardiac disease (not hypertension)</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Chronic cardiac disease (not hypertension)</skos:prefLabel>
     </owl:Class>
     
 
@@ -2028,18 +2423,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0100749"/>
             </owl:Restriction>
@@ -2047,6 +2430,36 @@
         <rdfs:label xml:lang="en">Chest pain</rdfs:label>
         <rdfs:label xml:lang="pt-br">Dor no peito</rdfs:label>
         <skos:prefLabel xml:lang="en">Chest pain</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Chest_pain"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2126,18 +2539,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000509"/>
             </owl:Restriction>
@@ -2145,6 +2546,36 @@
         <rdfs:label xml:lang="en">Conjunctivitis</rdfs:label>
         <rdfs:label xml:lang="pt-br">Conjuntivite</rdfs:label>
         <skos:prefLabel xml:lang="en">Conjunctivitis</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Conjunctivitis"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2192,18 +2623,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012735"/>
             </owl:Restriction>
@@ -2211,6 +2630,21 @@
         <rdfs:label xml:lang="en">Cough</rdfs:label>
         <rdfs:label xml:lang="pt-br">Tosse</rdfs:label>
         <skos:prefLabel xml:lang="en">Cough</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2239,23 +2673,26 @@
     
 
 
-    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum -->
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_signs -->
 
 
-    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
@@ -2265,6 +2702,36 @@
         <rdfs:label xml:lang="en">Cough with sputum</rdfs:label>
         <rdfs:label xml:lang="pt-br">Tosse com expectoração</rdfs:label>
         <skos:prefLabel xml:lang="en">Cough with sputum</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Cough_sputum"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2310,8 +2777,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Creatina quinase</rdfs:label>
-        <rdfs:label xml:lang="en">Creatine kinase</rdfs:label>
-        <skos:prefLabel xml:lang="en">Creatine kinase</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Creatine kinase measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Creatine kinase measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2328,8 +2795,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Creatinina</rdfs:label>
-        <rdfs:label xml:lang="en">Creatinine</rdfs:label>
-        <skos:prefLabel xml:lang="en">Creatinine</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Creatinine measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Creatinine measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2345,9 +2812,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/59850d750431038e6055b4e4ee4c3b90"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">D-dimer</rdfs:label>
         <rdfs:label xml:lang="pt-br">Dimero D</rdfs:label>
-        <skos:prefLabel xml:lang="en">D-dimer</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about D-dimer measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about D-dimer measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2357,6 +2824,12 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Question_group"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Module_2"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Daily clinical features</rdfs:label>
         <rdfs:label xml:lang="pt-br">Sintomas diários</rdfs:label>
         <skos:prefLabel xml:lang="en">Daily clinical features</skos:prefLabel>
@@ -2437,9 +2910,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000819"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Diabetes</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Diabete</rdfs:label>
-        <rdfs:label xml:lang="en">Diabetes</rdfs:label>
-        <skos:prefLabel xml:lang="en">Diabetes</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Diabetes</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Diabetes</skos:prefLabel>
     </owl:Class>
     
 
@@ -2451,18 +2925,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002014"/>
             </owl:Restriction>
@@ -2470,6 +2932,36 @@
         <rdfs:label xml:lang="en">Diarrhoea</rdfs:label>
         <rdfs:label xml:lang="pt-br">Diarréia</rdfs:label>
         <skos:prefLabel xml:lang="en">Diarrhoea</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Diarrhoea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2503,9 +2995,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/5f09273b1d16ece35e3103754b218720"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">ESR</rdfs:label>
+        <rdfs:label xml:lang="en">Question about ESR measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">VHS</rdfs:label>
-        <skos:prefLabel xml:lang="en">ESR</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about ESR measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2623,9 +3115,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/779f42fc6c6c4dc3ff6977a8a1ebc5fb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Ferritin</rdfs:label>
         <rdfs:label xml:lang="pt-br">Ferritina</rdfs:label>
-        <skos:prefLabel xml:lang="en">Ferritin</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Ferritin measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Ferritin measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2676,17 +3168,11 @@
 
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/GCS">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C41116"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000039"/>
+                <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/points"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2699,6 +3185,36 @@
         <rdfs:label xml:lang="pt-br">Escala de Coma de Glasgow (GCS /15)</rdfs:label>
         <rdfs:label xml:lang="en">Glasgow Coma Score (GCS /15)</rdfs:label>
         <skos:prefLabel xml:lang="en">Glasgow Coma Score (GCS /15)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/GCS_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/GCS_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/GCS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/GCS_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/GCS_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/GCS"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2726,9 +3242,9 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Gestational weeks assessment</rdfs:label>
+        <rdfs:label xml:lang="en">Question about gestational weeks assessment</rdfs:label>
         <rdfs:label xml:lang="pt-br">Tempo de gravidez</rdfs:label>
-        <skos:prefLabel xml:lang="en">Gestational weeks assessment</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about gestational weeks assessment</skos:prefLabel>
     </owl:Class>
     
 
@@ -2757,8 +3273,10 @@
                 <owl:onClass rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/hiv_list"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">HIV</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">HIV</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">HIV</rdfs:label>
+        <rdfs:label xml:lang="en">Question about presence of HIV</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of HIV</skos:prefLabel>
     </owl:Class>
     
 
@@ -2791,9 +3309,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C25613"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Haematocrit</rdfs:label>
         <rdfs:label xml:lang="pt-br">Hematócrito</rdfs:label>
-        <skos:prefLabel xml:lang="en">Haematocrit</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Haematocrit measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Haematocrit measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2810,8 +3328,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Hemoglobina</rdfs:label>
-        <rdfs:label>Haemoglobin</rdfs:label>
-        <skos:prefLabel xml:lang="en">Haemoglobin</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Haemoglobin measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Haemoglobin measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -2891,18 +3409,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49677"/>
             </owl:Restriction>
@@ -2923,6 +3429,36 @@
         <rdfs:label xml:lang="pt-br">Frequência cardíaca</rdfs:label>
         <rdfs:label xml:lang="en">Heart rate</rdfs:label>
         <skos:prefLabel xml:lang="en">Heart rate</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Heart_rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2981,9 +3517,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000822"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Hypertension</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Hipertensão</rdfs:label>
-        <rdfs:label xml:lang="en">Hypertension</rdfs:label>
-        <skos:prefLabel xml:lang="en">Hypertension</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Hypertension</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Hypertension</skos:prefLabel>
     </owl:Class>
     
 
@@ -3017,9 +3554,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/12efdabeb03dc5dfb875859b7ab97231"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">IL-6</rdfs:label>
         <rdfs:label xml:lang="pt-br">IL-6</rdfs:label>
-        <skos:prefLabel xml:lang="en">IL-6</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about IL-6 measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about IL-6 measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -3035,9 +3572,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/d68e7eab170ef95b4be22b73f6e48abe"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">INR</rdfs:label>
         <rdfs:label xml:lang="pt-br">INR</rdfs:label>
-        <skos:prefLabel xml:lang="en">INR</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about INR measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about INR measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -3121,9 +3658,9 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012735"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Cough</rdfs:label>
+        <rdfs:label xml:lang="en">Question about presence of cough</rdfs:label>
         <rdfs:label xml:lang="pt-br">Tosse</rdfs:label>
-        <skos:prefLabel xml:lang="en">Cough</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about presence of cough</skos:prefLabel>
     </owl:Class>
     
 
@@ -3153,8 +3690,8 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Tachypnoea: respiratory rate ≥50 breaths/min for &lt;1 year; ≥40 for 1-4 years; ≥30 for 5-12 years; ≥20 for ≥13 years</rdfs:comment>
         <rdfs:label xml:lang="pt-br">Dispneia (falta de ar) ou Taquipneia</rdfs:label>
-        <rdfs:label xml:lang="en">Dyspnoea (shortness of breath) OR Tachypnoea</rdfs:label>
-        <skos:prefLabel xml:lang="en">Dyspnoea (shortness of breath) OR Tachypnoea</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of dyspnoea (shortness of breath) OR Tachypnoea</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of dyspnoea (shortness of breath) OR Tachypnoea</skos:prefLabel>
     </owl:Class>
     
 
@@ -3326,9 +3863,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0012622"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Chronic kidney disease</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Chronic kidney disease</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Doença renal crônica</rdfs:label>
-        <skos:prefLabel xml:lang="en">Chronic kidney disease</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Chronic kidney disease</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Chronic kidney disease</skos:prefLabel>
     </owl:Class>
     
 
@@ -3344,9 +3882,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/9e59585b61d0d4b504587049a6646305"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">LDH</rdfs:label>
         <rdfs:label xml:lang="pt-br">LDH</rdfs:label>
-        <skos:prefLabel xml:lang="en">LDH</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about LDH measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about LDH measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -3437,9 +3975,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/115aa4f9958b1e25ed18054f49a99fe7"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Lactate</rdfs:label>
         <rdfs:label xml:lang="pt-br">Lactose</rdfs:label>
-        <skos:prefLabel xml:lang="en">Lactate</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Lactate measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Lactate measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -3472,9 +4010,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C113609"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Chronic liver disease</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Chronic liver disease</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Doença hepática crônica</rdfs:label>
-        <skos:prefLabel xml:lang="en">Chronic liver disease</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Chronic liver disease</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Chronic liver disease</skos:prefLabel>
     </owl:Class>
     
 
@@ -3568,9 +4107,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C9305"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Malignant neoplasm</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Malignant neoplasm</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Neoplasma maligno</rdfs:label>
-        <skos:prefLabel xml:lang="en">Malignant neoplasm</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Malignant neoplasm</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Malignant neoplasm</skos:prefLabel>
     </owl:Class>
     
 
@@ -3603,7 +4143,7 @@
 
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Maximum_daily_corticosteroid_dose">
-        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Specific_response"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
@@ -3736,18 +4276,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0003326"/>
             </owl:Restriction>
@@ -3755,6 +4283,36 @@
         <rdfs:label xml:lang="pt-br">Dor muscular (mialgia)</rdfs:label>
         <rdfs:label xml:lang="en">Muscle aches (myalgia)</rdfs:label>
         <skos:prefLabel xml:lang="en">Muscle aches (myalgia)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Myalgia"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3796,18 +4354,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C257"/>
             </owl:Restriction>
@@ -3815,6 +4361,36 @@
         <rdfs:label xml:lang="pt-br">Antiinflamatório não esteroide (AINE)</rdfs:label>
         <rdfs:label xml:lang="en">Non-steroidal anti-inflammatory (NSAID)</rdfs:label>
         <skos:prefLabel xml:lang="en">Non-steroidal anti-inflammatory (NSAID)</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID_medication -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID_medication">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Medication"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID_pre_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID_pre_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/NSAID"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/pre-admission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3833,12 +4409,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0000707"/>
+                <owl:someValuesFrom rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/128283000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Chronic neurological disorder</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Chronic neurological disorder</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Doença neurológica crônica</rdfs:label>
-        <skos:prefLabel xml:lang="en">Chronic neurological disorder</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Chronic neurological disorder</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Chronic neurological disorder</skos:prefLabel>
     </owl:Class>
     
 
@@ -3947,9 +4524,10 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Other co-morbidities</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Other co-morbidities</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Outras comorbidades</rdfs:label>
-        <skos:prefLabel xml:lang="en">Other co-morbidities</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Other co-morbidities</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Other co-morbidities</skos:prefLabel>
     </owl:Class>
     
 
@@ -4003,18 +4581,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question_specify"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C105783"/>
             </owl:Restriction>
@@ -4024,6 +4590,36 @@
         <rdfs:label xml:lang="en">Other signs or symptoms</rdfs:label>
         <rdfs:label xml:lang="pt-br">Outros</rdfs:label>
         <skos:prefLabel xml:lang="en">Other signs or symptoms</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4078,18 +4674,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C60832"/>
             </owl:Restriction>
@@ -4100,9 +4684,30 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C25613"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/has_literal_value"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Oxygen saturation</rdfs:label>
         <rdfs:label xml:lang="pt-br">Saturação de oxigênio</rdfs:label>
         <skos:prefLabel xml:lang="en">Oxygen saturation</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4114,14 +4719,53 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/List_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/has_value"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/oxygen_saturation_list"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_admission"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_expl"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_vital"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Oxygen_saturation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -4174,9 +4818,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/783e8e29e6a8c3e22baa58a19420eb4f"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">PT</rdfs:label>
+        <rdfs:label xml:lang="en">Question about PT measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">TP</rdfs:label>
-        <skos:prefLabel xml:lang="en">PT</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about PT measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4253,8 +4897,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Plaquetas</rdfs:label>
-        <rdfs:label>Platelets</rdfs:label>
-        <skos:prefLabel xml:lang="en">Platelets</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Platelets measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Platelets measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4294,9 +4938,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/8579990aaf7427db2c7bbe5ec8230e71"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Potassium</rdfs:label>
         <rdfs:label xml:lang="pt-br">Potássio</rdfs:label>
-        <skos:prefLabel xml:lang="en">Potassium</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Potassium measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Potassium measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4306,6 +4950,12 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Pregnant">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNUN_Question"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Demographics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Grávida</rdfs:label>
         <rdfs:label xml:lang="en">Pregnant</rdfs:label>
         <skos:prefLabel xml:lang="en">Pregnant</skos:prefLabel>
@@ -4324,9 +4974,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/779f42fc6c6c4dc3ff6977a8a1ebc5fb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Procalcitonin</rdfs:label>
         <rdfs:label xml:lang="pt-br">Procalcitonina</rdfs:label>
-        <skos:prefLabel xml:lang="en">Procalcitonin</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Procalcitonin measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Procalcitonin measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4366,9 +5016,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0006528"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Chronic pulmonary disease</rdfs:label>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Chronic pulmonary disease</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="pt-br">Doença pulmonar crônica</rdfs:label>
-        <skos:prefLabel xml:lang="en">Chronic pulmonary disease</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about presence of Chronic pulmonary disease</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about presence of Chronic pulmonary disease</skos:prefLabel>
     </owl:Class>
     
 
@@ -4407,18 +5058,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49678"/>
             </owl:Restriction>
@@ -4439,6 +5078,36 @@
         <rdfs:label xml:lang="pt-br">Frequência respiratória</rdfs:label>
         <rdfs:label xml:lang="en">Respiratory rate</rdfs:label>
         <skos:prefLabel xml:lang="en">Respiratory rate</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Respiratory_rate"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4474,24 +5143,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Complications"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001250"/>
             </owl:Restriction>
@@ -4503,6 +5154,51 @@
     
 
 
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_complications -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_complications">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Complications"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Seizures"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration -->
 
 
@@ -4510,25 +5206,43 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.bioontology.org/ontology/SNOMEDCT/450316000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:label xml:lang="pt-br">Desidratação severa</rdfs:label>
+        <rdfs:label xml:lang="en">Severe dehydration</rdfs:label>
+        <skos:prefLabel xml:lang="en">Severe dehydration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Severe_dehydration"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0001944"/>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="pt-br">Desidratação severa</rdfs:label>
-        <rdfs:label xml:lang="en">Severe dehydration</rdfs:label>
-        <skos:prefLabel xml:lang="en">Severe dehydration</skos:prefLabel>
     </owl:Class>
     
 
@@ -4589,18 +5303,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002094"/>
             </owl:Restriction>
@@ -4608,6 +5310,36 @@
         <rdfs:label xml:lang="pt-br">Falta de ar</rdfs:label>
         <rdfs:label xml:lang="en">Shortness of breath</rdfs:label>
         <skos:prefLabel xml:lang="en">Shortness of breath</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Shortnesss_of_breath"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4703,6 +5435,7 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C67147"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Current smoking</whocovid19crfsemdatamodel:who_covid_crf_label>
         <rdfs:label xml:lang="en">Current smoking</rdfs:label>
         <rdfs:label xml:lang="pt-br">Fumante</rdfs:label>
         <skos:prefLabel xml:lang="en">Current smoking</skos:prefLabel>
@@ -4721,9 +5454,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/8579990aaf7427db2c7bbe5ec8230e71"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Sodium</rdfs:label>
+        <rdfs:label xml:lang="en">Question about Sodium measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">Sódio</rdfs:label>
-        <skos:prefLabel xml:lang="en">Sodium</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about Sodium measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4735,18 +5468,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C50747"/>
             </owl:Restriction>
@@ -4754,6 +5475,36 @@
         <rdfs:label xml:lang="pt-br">Dor de garganta</rdfs:label>
         <rdfs:label xml:lang="en">Sore throat</rdfs:label>
         <skos:prefLabel xml:lang="en">Sore throat</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Sore_throat"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4788,12 +5539,6 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Specific_response">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Text_Question"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">resposta específica</rdfs:label>
         <rdfs:label xml:lang="en">specific response</rdfs:label>
     </owl:Class>
@@ -4863,18 +5608,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Number_question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C25206"/>
             </owl:Restriction>
@@ -4895,6 +5628,36 @@
         <rdfs:label xml:lang="pt-br">Temperatura</rdfs:label>
         <rdfs:label xml:lang="en">Temperature</rdfs:label>
         <skos:prefLabel xml:lang="en">Temperature</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature_admission -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature_admission">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature_vital -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature_vital">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Temperature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_vital_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4926,8 +5689,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Bilirrubina total</rdfs:label>
-        <rdfs:label xml:lang="en">Total bilirubin</rdfs:label>
-        <skos:prefLabel xml:lang="en">Total bilirubin</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about Total bilirubin measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about Total bilirubin measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4943,9 +5706,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/779f42fc6c6c4dc3ff6977a8a1ebc5fb"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Troponin</rdfs:label>
+        <rdfs:label xml:lang="en">Question about Troponin measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">Troponina</rdfs:label>
-        <skos:prefLabel xml:lang="en">Troponin</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about Troponin measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -4967,9 +5730,10 @@
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/NCIT_C3423"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <whocovid19crfsemdatamodel:who_covid_crf_label xml:lang="en">Tuberculosis</whocovid19crfsemdatamodel:who_covid_crf_label>
+        <rdfs:label xml:lang="en">Question about presence of Tuberculosis</rdfs:label>
         <rdfs:label xml:lang="pt-br">Tuberculose</rdfs:label>
-        <rdfs:label xml:lang="en">Tuberculosis</rdfs:label>
-        <skos:prefLabel xml:lang="en">Tuberculosis</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about presence of Tuberculosis</skos:prefLabel>
     </owl:Class>
     
 
@@ -5019,18 +5783,6 @@
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/YNU_Question"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/HP_0002017"/>
             </owl:Restriction>
@@ -5038,6 +5790,36 @@
         <rdfs:label xml:lang="en">Vomiting/Nausea</rdfs:label>
         <rdfs:label xml:lang="pt-br">Vômito/náusea</rdfs:label>
         <skos:prefLabel xml:lang="en">Vomiting/Nausea</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Daily_clinical_features"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vomiting"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/signs_and_symptoms"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5054,8 +5836,8 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Leucócitos</rdfs:label>
-        <rdfs:label>WBC count</rdfs:label>
-        <skos:prefLabel xml:lang="en">WBC count</skos:prefLabel>
+        <rdfs:label xml:lang="en">Question about WBC count measurement</rdfs:label>
+        <skos:prefLabel xml:lang="en">Question about WBC count measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -5223,6 +6005,12 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_coronavirus">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/List_Question"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Coronavirus"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Qual coronavírus</rdfs:label>
         <rdfs:label xml:lang="en">Which coronavirus</rdfs:label>
         <skos:prefLabel xml:lang="en">Which coronavirus</skos:prefLabel>
@@ -5326,15 +6114,39 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Specific_response"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="pt-br">Qual sinal ou sintoma</rdfs:label>
         <rdfs:label xml:lang="en">Which sign or symptom</rdfs:label>
         <skos:prefLabel xml:lang="en">Which sign or symptom</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom_daily -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom_daily">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_daily"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom_signs -->
+
+
+    <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom_signs">
+        <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Which_sign_or_symptom"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Other_signs_signs"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -5362,12 +6174,6 @@
 
     <owl:Class rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/YNUN_Question">
         <rdfs:subClassOf rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/C41116"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Demographics"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/has_value"/>
@@ -5434,12 +6240,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Vital_signs"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="http://purl.bioontology.org/ontology/LNC/MTHU029790"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Admission date at this facility</rdfs:label>
@@ -5754,6 +6554,7 @@
         <rdfs:label xml:lang="en">WHO-COVID-19-Rapid-CRF</rdfs:label>
         <skos:definition xml:lang="en">This class represents the Rapid version of the World Health Organisation&apos;s (WHO) Case Record Form (CRF) for the COVID-19 outbreak.</skos:definition>
         <skos:prefLabel xml:lang="en">WHO-COVID-19-Rapid-CRF</skos:prefLabel>
+        <foaf:page rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.who.int/docs/default-source/coronaviruse/who-ncov-crf.pdf?sfvrsn=84766e69_2</foaf:page>
     </owl:Class>
     
 
@@ -5823,9 +6624,9 @@
                 <owl:hasValue rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/115aa4f9958b1e25ed18054f49a99fe7"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label xml:lang="en">Urea (BUN)</rdfs:label>
+        <rdfs:label xml:lang="en">Question about Urea (BUN) measurement</rdfs:label>
         <rdfs:label xml:lang="pt-br">Uréia (BUN)</rdfs:label>
-        <skos:prefLabel xml:lang="en">Urea (BUN)</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Question about Urea (BUN) measurement</skos:prefLabel>
     </owl:Class>
     
 
@@ -5891,6 +6692,8 @@
     <owl:Class rdf:about="https://hpo.jax.org/app/browse/term/HP:0001289">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:label xml:lang="en">Confusion</rdfs:label>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.bioontology.org/ontology/SNOMEDCT/40917007</skos:closeMatch>
+        <skos:closeMatch rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/NCIT_C37928</skos:closeMatch>
     </owl:Class>
     
 
@@ -6138,8 +6941,8 @@
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/oxygen_saturation_list"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1164-1351"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-06T15:05:53Z</dc:date>
+        <rdfs:label xml:lang="en">Oxygen therapy</rdfs:label>
         <rdfs:label xml:lang="pt-br">oxigenoterapia</rdfs:label>
-        <rdfs:label xml:lang="en">oxygen therapy</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6151,8 +6954,8 @@
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/oxygen_saturation_list"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1164-1351"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-04-06T15:04:19Z</dc:date>
+        <rdfs:label xml:lang="en">Room air</rdfs:label>
         <rdfs:label xml:lang="pt-br">ar ambiente</rdfs:label>
-        <rdfs:label xml:lang="en">room air</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -6554,6 +7357,15 @@
     
 
 
+    <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/instances/points -->
+
+
+    <owl:NamedIndividual rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/points">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000003"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.org/vodan/whocovid19crfsemdatamodel/instances/0be7857b28709a247d09063cb3e1078d -->
 
 
@@ -6681,7 +7493,7 @@
     <owl:NamedIndividual rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/avpu-list/A">
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_list"/>
         <rdfs:comment xml:lang="en">The patient is fully awake.</rdfs:comment>
-        <rdfs:label xml:lang="en">A</rdfs:label>
+        <rdfs:label xml:lang="en">Alert</rdfs:label>
         <skos:altLabel xml:lang="en">Alert</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -6693,7 +7505,7 @@
     <owl:NamedIndividual rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/avpu-list/P">
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_list"/>
         <rdfs:comment xml:lang="en">The patient makes a response on any of the three component measures on the application of pain stimulus, such as a central pain stimulus like a sternal rub or a peripheral stimulus such as squeezing the fingers.</rdfs:comment>
-        <rdfs:label xml:lang="en">P</rdfs:label>
+        <rdfs:label xml:lang="en">Pain</rdfs:label>
         <skos:altLabel xml:lang="en">Pain</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -6705,7 +7517,7 @@
     <owl:NamedIndividual rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/avpu-list/U">
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_list"/>
         <rdfs:comment xml:lang="en">Sometimes seen noted as &apos;unconscious&apos;, this outcome is recorded if the patient does not give any eye, voice or motor response to voice or pain.</rdfs:comment>
-        <rdfs:label xml:lang="en">U</rdfs:label>
+        <rdfs:label xml:lang="en">Unresponsive</rdfs:label>
         <skos:altLabel xml:lang="en">Unresponsive</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -6717,7 +7529,7 @@
     <owl:NamedIndividual rdf:about="http://purl.org/vodan/whocovid19crfsemdatamodel/instances/avpu-list/V">
         <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/AVPU_list"/>
         <rdfs:comment xml:lang="en">The patient makes some kind of response when you talk to them.</rdfs:comment>
-        <rdfs:label xml:lang="en">V</rdfs:label>
+        <rdfs:label xml:lang="en">Verbal</rdfs:label>
         <skos:altLabel xml:lang="en">Verbal</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -6762,26 +7574,6 @@
     
 
 
-    <!-- https://github.com/mnieuwland -->
-
-
-    <owl:NamedIndividual rdf:about="https://github.com/mnieuwland">
-        <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Person"/>
-        <rdfs:label xml:lang="en">Marc Nieuwland</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://orcid.org/0000-0002-1215-167X -->
-
-
-    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-1215-167X">
-        <rdf:type rdf:resource="http://purl.org/vodan/whocovid19crfsemdatamodel/Person"/>
-        <rdfs:label xml:lang="en">Rajaram Kaliyaperumal</rdfs:label>
-    </owl:NamedIndividual>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -6791,12 +7583,6 @@
      -->
 
 
-    <rdf:Description rdf:about="http://eulersharp.sourceforge.net/2003/03swap/countries#br">
-        <rdfs:label xml:lang="pt-br">Brasil</rdfs:label>
-        <rdfs:label xml:lang="en">Brazil</rdfs:label>
-        <rdfs:label xml:lang="nl">Brazilië</rdfs:label>
-        <foaf:name xml:lang="pt-br">Brasil</foaf:name>
-    </rdf:Description>
     <rdf:Description rdf:about="http://semanticscience.org/resource/SIO_000563">
         <rdfs:label xml:lang="en">describes</rdfs:label>
     </rdf:Description>
